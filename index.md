@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## 王庆瑞
+Figure 3 :
+Search and Review Files用例图说明：
+作者：李元祥，王庆瑞
+用例图建模过程分析：
+一：根据上述的Search and Review Files中的功能分析，对其进行如下描述 Files Manage中总共有以下的几大用例：
+1.	查找文件（Search Files）
+2.	阅读文件（Review Files）
+3.	模糊查找（Fuzzy Saerch）
+4.	精确查找（Exact Search）
+5.	下载后查看（Download after Review）
+6.	在线查看（Online Review）
+其中Search and Review Files中主要有两大参与者：
+1.	用户（User）
+2.	管理员（Administrator）
+二：模型分析
+1.	管理员（Administrator）和用户（User）都共同有查找文件（Search Files）和阅读文件（Review Files）
+2.	对于查找文件（Search Files），存在精确查找（Exact Search）找和模糊查询（Fuzzy Saerch）的泛化关系；
+3.	对于阅读文件（Review Files），存在下载后查看（Download after Review）和在线查看（Online Review）的泛化关系
+4.	由于阅读前应该是先查找文件（Search Files）到然后再阅读文件（Review Files），固然存在阅读文件（Review Files）依赖查找文件（Search Files）；
 
-You can use the [editor on GitHub](https://github.com/Wqr20182123018/wqr20182123018.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Wqr20182123018/wqr20182123018.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+三．	模型建立： 
+1.	用户（User）和管理员（Administrator）都共同指向查找文件（Search Files）和阅读文件（Review Files）
+2.	阅读文件（Review Files）依赖指向于查找文件（Search Files）；
+3.	精确查找（Exact Search）和模糊查询（Fuzzy Saerch）指向泛化于查找文件（Search Files）；
+4.	下载后查看（Download after Review）和在线查看（Online Review）指向泛化于阅读文件（Review Files）；
